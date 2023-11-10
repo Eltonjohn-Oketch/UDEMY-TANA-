@@ -1,0 +1,54 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2023/xmlschema"
+
+	targetNamespace="http://www.Tanafellow.com/order"
+	xmlns:tns="http://www.Tanafellow.com/order"
+
+	elementFormDefault="qualified">
+
+	<element name="order" type="tns:orderType"/>
+	<complexType name="orderType">
+
+		<sequence>
+			<element name="customer" type="tns:customerType"/>
+			<element name="product" type="tns:productType"/>
+		</sequence>
+	</complexType>
+
+	<complexType name="customerType">
+		<sequence>
+			<element name="name" type="string"/>
+			<element name="phone"  type="string" minOccurs="0"/>
+		</sequence>
+		
+	</complexType>
+
+	<complexType name="productType">
+		<sequence>
+				<element name="name" type="tns:string20char"/>
+				<element name="description" type="tns:string100char"/>
+				<element name="price" type="int"/>
+				<element name="category" type="tns:productcategory"/>
+		</sequence>
+	</complexType>
+	
+	<simpleType name="string20char">
+		<restriction base="string"> 
+			<maxlength value="20/">
+		</restriction>
+	</simpleType>
+	<simpleType name="string100char">
+		<restriction base="string">
+			<maxlength value="100"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="productcategory">
+			<restriction base="string">
+				<enumeration value="electronics"/>
+				<enumeration value="books"/>
+				<enumeration value="shoes"/>
+			</restriction>
+	</simpleType>
+</schema>
+
