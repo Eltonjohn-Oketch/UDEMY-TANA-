@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2023/XMLSchema"
+        targetNamespace="order.de"
+        xmlns:sd="order.de"
+        elementFormDefault="qualified">
+    <element name="Order" type="sd:Order"/>
+    <complexType name="Order">
+        <attribute name="id" type="sd:res50" use="required"/>
+        <sequence>
+            <element name="customer" type="sd:Customer"/>
+            <element name="product" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType name="Customer">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="phone" type="string" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <simpleType name="res50">
+        <restriction base="int">
+            <maxInclusive value="50"/>
+        </restriction>
+    </simpleType>
+</schema>
