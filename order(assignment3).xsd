@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2023/XMLSchema"
 
-	targetNamespace="http://www.Tanafellow.com/passenger"
-	xmlns:tns="http://http://www.Tanafellow.com/passenger"
+	targetNamespace="http://www.Tanafellow.com/order"
+	xmlns:tns="http://http://www.Tanafellow.com/order"
 	
 	elementFormDefault="qualified">
 	<element name="order" type="tns:order" />
