@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserProfile>
+    <FirstName>Eltonjohn</FirstName>
+    <LastName>Oketch</LastName>
+    <PassWord>4567</PassWord>
+    <Email>eltonjohnoketch@gmail.com</Email>
+    <Picture location="servername/filename"/>
+</UserProfile>
