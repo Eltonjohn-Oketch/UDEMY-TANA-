@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.Kenyaairways.com/Reservation"
+	xmlns:tns="http://www.Kenyaairways.com/Reservation">
+	<element name="reservation">
+		<complexType>
+			<sequence>
+				<element name="flight" type="tns:flight" />
+				<element name="passenger" type="tns:passenger" />
+			</sequence>
+		</complexType>
+		<complexType name="passenger">
+			<sequence>
+				<element name="lastname" type="string" />
+				<element name="firstname" type="string" />
+				<element name="middlename" type="string" />
+				<element name="email" type="string" />
+				<element name="phone" type="string" />
+			</sequence>
+		</complexType>
+
+		<complexType name="flight">
+			<sequence>
+				<element name="flightNumber" type="string" />
+				<element name="operatingAirlines" type="string" />
+				<element name="arrivalCity" type="string" />
+				<element name="dateofdeparture" type="date" />
+				<element name="estimatedTimeIfDeparture" type="time" />
+			</sequence>
+		</complexType>
+
+
+</schema>
+
+
+
+
+
+
+
+
+
